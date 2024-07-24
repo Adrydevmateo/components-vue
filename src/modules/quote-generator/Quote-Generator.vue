@@ -4,6 +4,8 @@ import IconLoading from '@/core/assets/svg/DotsScale.svg'
 
 const url = import.meta.env.VITE_QUOTE_URL
 
+if (!url) alert('Quote Generator URL not found!')
+
 const quoteID = ref(0)
 const quote = ref('')
 
@@ -20,6 +22,7 @@ const loadNewQuote = () => {
         loading.value = false
       }, 1000);
     })
+    .catch(err => console.error('Error: ', err))
 }
 
 loadNewQuote()
