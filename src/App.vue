@@ -16,7 +16,6 @@ import Header from '@components/Header.component.vue';
 
 .bounce-leave-active {
   display: none;
-  /* animation: bounce-in 0.5s reverse; */
 }
 
 @keyframes bounce-in {
